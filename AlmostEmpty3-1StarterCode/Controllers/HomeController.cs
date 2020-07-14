@@ -19,5 +19,11 @@ namespace AlmostEmpty3_1StarterCode.Controllers
 		{
 			return View();
 		}
+
+		public IActionResult TestPage()
+		{
+			ViewData["Title"] = "Red Page";
+			return View();
+		}
 	}
 }

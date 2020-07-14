@@ -4,11 +4,18 @@
 	<head>
 		@*<title>@ViewBag.Title</title>*@
 		<title>@ViewData["Title"]</title>
+		<link rel="stylesheet" href="~/css/site.css" />
 	</head>
 	<body>
 		<header>
 			<h1>Welcome to my first website</h1>
 		</header>
+		<nav>
+			@*@Html.ActionLink("Home Page", "Index", "Home")*@
+			<a asp-controller="Home" asp-action="Index">Home Page</a> <br />
+			<a asp-controller="Home" asp-action="About">About Page</a> <br />
+			<a asp-controller="Home" asp-action="TestPage">Red Page</a>
+		</nav>
 		<main>@RenderBody()</main>
 		<footer>
 			&copy;@DateTime.Today.Year
